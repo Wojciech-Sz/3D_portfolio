@@ -3,8 +3,10 @@
 import { useRef, useState } from "react";
 import NavItems from "@/app/components/shared/NavItems";
 import MenuIcon from "@/app/components/ui/MenuIcon";
-import { useGSAP, gsap } from "@/lib/gsap";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
+gsap.registerPlugin(useGSAP);
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const topLine = useRef(null);
@@ -21,20 +23,24 @@ const Navbar = () => {
       gsap.to(topLine.current, {
         attr: { y1: 4, y2: 20, x1: 1.2, x2: 22.8 },
         duration: 0.3,
+        ease: "power1.inOut",
       });
       gsap.to(middleLine.current, {
         attr: { opacity: 0 },
         duration: 0.3,
+        ease: "power1.inOut",
       });
       gsap.to(bottomLine.current, {
         attr: { y1: 20, y2: 4, x1: 1.2, x2: 22.8 },
         duration: 0.3,
+        ease: "power1.inOut",
       });
     } else {
       // Animate to hamburger
       gsap.to(topLine.current, {
         attr: { y1: 4, y2: 4, x1: 1.2, x2: 22.8 },
         duration: 0.3,
+        ease: "power1.inOut",
       });
       gsap.to(middleLine.current, {
         attr: {
@@ -45,10 +51,12 @@ const Navbar = () => {
           opacity: 1,
         },
         duration: 0.3,
+        ease: "power1.inOut",
       });
       gsap.to(bottomLine.current, {
         attr: { y1: 20, y2: 20, x1: 1.2, x2: 22.8 },
         duration: 0.3,
+        ease: "power1.inOut",
       });
     }
   });
@@ -61,7 +69,7 @@ const Navbar = () => {
             href="/"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
           >
-            Home
+            Wojtek
           </a>
           <button
             className="text-neutral-400 hover:text-white transition-colors focus:outline-none sm:hidden flex"
@@ -72,7 +80,7 @@ const Navbar = () => {
               topLine={topLine}
               middleLine={middleLine}
               bottomLine={bottomLine}
-              className="size-6 text-white"
+              className="size-5"
             />
           </button>
 
