@@ -1,3 +1,10 @@
+import next from "@/public//icons/next.svg";
+import gs from "@/public/icons/gsap.svg";
+import tw from "@/public/icons/tail.svg";
+import ts from "@/public/icons/ts.svg";
+import re from "@/public/icons/re.svg";
+import th from "@/public/icons/three.svg";
+
 export const navLinks = [
   {
     id: 1,
@@ -276,5 +283,32 @@ export const workExperiences = [
       "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
     icon: "/assets/notion.svg",
     animation: "salute",
+  },
+];
+
+export const stack = [
+  {
+    img: ts,
+    name: "TypeScript",
+  },
+  {
+    img: re,
+    name: "React",
+  },
+  {
+    img: next,
+    name: "Next.js",
+  },
+  {
+    img: tw,
+    name: "Tailwind CSS",
+  },
+  {
+    img: gs,
+    name: "GSAP",
+  },
+  {
+    img: th,
+    name: "Three.js",
   },
 ];

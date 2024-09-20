@@ -21,6 +21,46 @@ body {
 
 }
 
+.rotate-60 {
+  @apply rotate-[60deg];
+}
+
+.rotate-120 {
+  @apply rotate-[120deg];
+}
+
+.rotate-180 {
+  @apply rotate-[180deg];
+}
+
+.rotate-240 {
+  @apply rotate-[240deg];
+}
+
+.rotate-300 {
+  @apply rotate-[300deg];
+}
+
+.-rotate-60 {
+  @apply -rotate-[60deg];
+}
+
+.-rotate-120 {
+  @apply -rotate-[120deg];
+}
+
+.-rotate-180 {
+  @apply -rotate-[180deg];
+}
+
+.-rotate-240 {
+  @apply -rotate-[240deg];
+}
+
+.-rotate-300 {
+  @apply -rotate-[300deg];
+}
+
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;
@@ -73,7 +113,7 @@ body {
     @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
   }
 
-  .grid-headtext {
+  .grid-header {
     @apply text-xl font-semibold mb-2 text-white font-sans;
   }
 
@@ -84,6 +124,7 @@ body {
   .copy-container {
     @apply cursor-pointer flex justify-center items-center gap-2;
   }
+
 
   /* projects section  */
   .arrow-btn {
