@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import React from "react";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 400 500 700 800 900",
+  weight: "100 300 400 500 600 700 800 900",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -27,9 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans font-bold antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans font-bold antialiased dark`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -2,19 +2,19 @@
 
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import HackerRoom from "../shared/HackerRoom";
-import CanvasLoader from "../shared/CanvasLoader";
-import Target from "../shared/Target";
+import HackerRoom from "@/components/Models/HackerRoom";
+import CanvasLoader from "@/components/shared/CanvasLoader";
+import Target from "@/components/Models/Target";
 import { Suspense } from "react";
 
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "@/lib/utils";
-import ReactLogo from "../shared/ReactLogo";
-import Cube from "@/app/components/shared/Cube";
-import Rings from "@/app/components/shared/Rings";
-import HeroCamera from "@/app/components/shared/HeroCamera";
+import ReactLogo from "@/components/Models/ReactLogo";
+import Cube from "@/components/Models/Cube";
+import Rings from "@/components/Models/Rings";
+import HeroCamera from "@/components/shared/HeroCamera";
 import Link from "next/link";
-import Button from "@/app/components/ui/Button";
+import MyButton from "@/components/ui/MyButton";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -58,8 +58,8 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <Link href="/#contact" scroll>
-          <Button
+        <Link href="/public#about" scroll>
+          <MyButton
             name={"Let's work together"}
             isBeam
             containerClass={"sm:w-fit w-full sm:min-w-96"}

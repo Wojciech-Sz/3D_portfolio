@@ -7,7 +7,7 @@ import { stack } from "@/constans";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Globe from "react-globe.gl";
-import Button from "@/app/components/ui/Button";
+import MyButton from "@/components/ui/MyButton";
 import grid3 from "@/public/assets/grid3.png";
 import grid4 from "@/public/assets/grid4.png";
 import { Copy, CopyCheck } from "lucide-react";
@@ -48,7 +48,7 @@ const About = () => {
   };
 
   return (
-    <section id={"about"} className={"c-space my-20"}>
+    <section id={"about"} className={"c-space py-20"}>
       <div
         className={
           "grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:grid-rows-6 gap-5 h-full"
@@ -125,11 +125,13 @@ const About = () => {
               <p className={"grid-subtext"}>
                 I&apos;m based in Poland, with remote work available.
               </p>
-              <Button
-                name={"Get in touch"}
-                isBeam
-                containerClass={"w-full mt-10"}
-              />
+              <a href="/public#contact">
+                <MyButton
+                  name={"Get in touch"}
+                  isBeam
+                  containerClass={"w-full mt-10"}
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -157,7 +159,7 @@ const About = () => {
               src={grid4}
               alt={"grid-4"}
               className={
-                "w-full xl:h-[126px] md:h-[400px] max-md:object-contain sm:h-[276px] h-fit object-cover sm:object-top"
+                "w-full xl:h-[126px] object-contain sm:h-[276px] h-fit xl:object-cover sm:object-top"
               }
             />
             <div className={"flex flex-col gap-2"}>

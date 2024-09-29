@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({
+const MyButton = ({
   name,
   isBeam = false,
   containerClass = "",
@@ -21,4 +21,4 @@ const Button = ({
     </button>
   );
 };
-export default Button;
+export default MyButton;

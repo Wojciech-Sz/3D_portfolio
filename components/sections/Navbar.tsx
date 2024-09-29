@@ -1,10 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import NavItems from "@/app/components/shared/NavItems";
-import MenuIcon from "@/app/components/ui/MenuIcon";
+import NavItems from "@/components/shared/NavItems";
+import MenuIcon from "@/components/ui/MenuIcon";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Button } from "@/components/ui/button";
 
 gsap.registerPlugin(useGSAP);
 const Navbar = () => {
@@ -66,14 +67,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           <a
-            href="/"
+            href="/public"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
           >
             Wojtek
           </a>
-          <button
+          <Button
             className="text-neutral-400 hover:text-white transition-colors focus:outline-none sm:hidden flex"
             aria-label="Toggle Menu"
+            variant={"ghost"}
+            size={"icon"}
             onClick={() => toggleMenu()}
           >
             <MenuIcon
@@ -82,7 +85,7 @@ const Navbar = () => {
               bottomLine={bottomLine}
               className="size-5"
             />
-          </button>
+          </Button>
 
           <nav className="hidden sm:flex">
             <NavItems />
