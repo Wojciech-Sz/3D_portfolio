@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import grid1 from "@/public/assets/grid1.png";
 import { stack } from "@/constans";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Globe from "react-globe.gl";
+
+const DynamicGlobe = dynamic(() => import("react-globe.gl"), { ssr: false });
 import MyButton from "@/components/ui/MyButton";
 import grid3 from "@/public/assets/grid3.png";
 import grid4 from "@/public/assets/grid4.png";
@@ -108,7 +110,7 @@ const About = () => {
                 "rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center"
               }
             >
-              <Globe
+              <DynamicGlobe
                 height={326}
                 width={326}
                 backgroundColor="rgba(0,0,0,0)"
@@ -125,7 +127,7 @@ const About = () => {
               <p className={"grid-subtext"}>
                 I&apos;m based in Poland, with remote work available.
               </p>
-              <a href="/public#contact">
+              <a href="/#contact">
                 <MyButton
                   name={"Get in touch"}
                   isBeam
